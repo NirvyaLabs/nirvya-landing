@@ -6,3 +6,7 @@ node_modules/
 out/
 *.tsbuildinfo
 npm-debug.log*
+
+# Local design-tool artifacts
+.hallmark/
+.impeccable/

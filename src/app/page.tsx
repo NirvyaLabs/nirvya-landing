@@ -33,7 +33,7 @@ const organizationSchema = {
   name: "Nirvya Labs",
   url: SITE_URL,
   description: DESCRIPTION,
-  email: "rishi@nirvyalabs.com",
+  email: "contact@nirvyalabs.com",
   location: [
     { "@type": "Place", name: "Sydney, Australia" },
     { "@type": "Place", name: "Andhra Pradesh, India" }

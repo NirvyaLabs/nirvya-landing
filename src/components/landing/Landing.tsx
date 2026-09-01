@@ -10,7 +10,7 @@ import "./landing.css";
 export const APP_LOGIN_URL = `${process.env.NEXT_PUBLIC_APP_URL ?? "https://app.nirvyalabs.com"}/login`;
 
 const PILOT_URL =
-  "mailto:rishi@nirvyalabs.com?subject=Nirvya%20pilot%20request&body=Organisation%3A%0ACountry%3A%0AFacilities%20or%20care%20settings%3A%0AWhat%20should%20the%20pilot%20prove%3F%0A";
+  "mailto:contact@nirvyalabs.com?subject=Nirvya%20pilot%20request&body=Organisation%3A%0ACountry%3A%0AFacilities%20or%20care%20settings%3A%0AWhat%20should%20the%20pilot%20prove%3F%0A";
 
 const PRODUCT_LINKS = [
   { href: "/product/clinical", label: "Clinical workspace", desc: "Care delivery at the source" },
@@ -139,7 +139,7 @@ export function MarketingFooter() {
         <span>© 2026 Nirvya Labs</span>
         <span>Sydney, Australia · Andhra Pradesh, India</span>
         <span>Krama Core · Apache 2.0</span>
-        <a href="mailto:rishi@nirvyalabs.com">Contact</a>
+        <a href="mailto:contact@nirvyalabs.com">Contact</a>
       </div>
     </footer>
   );
@@ -175,7 +175,7 @@ function CountryEvidence() {
 
           <div className="nvl-country-panel" key={country}>
             <div className="nvl-country-intro">
-              <span className="nvl-status"><i />{data.status}</span>
+              <span className="nvl-status">{data.status}</span>
               <h3>{data.statement}</h3>
               <p>{data.nirvya}</p>
             </div>
@@ -202,7 +202,7 @@ export function Landing() {
         <header className="nvl-hero" id="top">
           <div className="nvl-container nvl-hero-grid">
             <div className="nvl-hero-copy">
-              <span className="nvl-kicker"><i /> Built for connected care</span>
+              <span className="nvl-kicker">Built for connected care</span>
               <h1>One system for every care handoff.</h1>
               <p>Clinical work, patient access and standards-based exchange in one connected layer—starting with India’s ABDM.</p>
               <div className="nvl-hero-actions">
@@ -213,7 +213,7 @@ export function Landing() {
             </div>
 
             <div className="nvl-hero-visual" aria-label="Nirvya clinical workspace preview">
-              <div className="nvl-visual-meta"><span>Clinical workspace</span><span><i /> Encounter active</span></div>
+              <div className="nvl-visual-meta"><span>Clinical workspace</span><span>Encounter active</span></div>
               <MockDashboard />
               <div className="nvl-visual-foot"><span>Clinician-reviewed</span><span>Patient-linked</span><span>Exchange-ready</span></div>
             </div>
@@ -292,7 +292,7 @@ export function Landing() {
 
         <section className="nvl-close" id="contact">
           <div className="nvl-container nvl-close-grid">
-            <div><span className="nvl-kicker"><i /> A clear place to begin</span><h2>Make the next handoff work.</h2></div>
+            <div><span className="nvl-kicker">A clear place to begin</span><h2>Make the next handoff work.</h2></div>
             <div><p>Tell us which care journey your facility or health system needs to improve.</p><a className="nvl-btn nvl-btn-accent" href={PILOT_URL}>Request a pilot <ArrowRight size={16} /></a></div>
           </div>
         </section>

@@ -15,7 +15,7 @@ export type ProductSection = {
 };
 
 const PILOT_URL =
-  "mailto:rishi@nirvyalabs.com?subject=Nirvya%20pilot%20request&body=Organisation%3A%0ACountry%3A%0AFacilities%20or%20care%20settings%3A%0AWhat%20should%20the%20pilot%20prove%3F%0A";
+  "mailto:contact@nirvyalabs.com?subject=Nirvya%20pilot%20request&body=Organisation%3A%0ACountry%3A%0AFacilities%20or%20care%20settings%3A%0AWhat%20should%20the%20pilot%20prove%3F%0A";
 
 export function ProductPage({
   eyebrow,
@@ -86,7 +86,7 @@ export function ProductPage({
               <a className="nvl-btn nvl-btn-primary" href={PILOT_URL}>
                 Request a pilot <ArrowRight size={16} />
               </a>
-              <a className="nvl-btn nvl-btn-ghost-dark" href="mailto:rishi@nirvyalabs.com">Talk to the team</a>
+              <a className="nvl-btn nvl-btn-ghost-dark" href="mailto:contact@nirvyalabs.com">Talk to the team</a>
             </div>
           </div>
         </section>

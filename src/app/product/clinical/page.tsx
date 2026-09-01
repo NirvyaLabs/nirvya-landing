@@ -4,40 +4,40 @@ import { MockDashboard } from "@/components/landing/mockups";
 import { ProductPage } from "@/components/landing/ProductPage";
 
 export const metadata: Metadata = {
-  title: "Clinical Platform — Nirvya Health",
+  title: "Clinical Workspace — Nirvya Health",
   description:
-    "AI-assisted SOAP notes, digital prescriptions with drug interaction checks, ABHA registration, and scheduling — ABDM-compliant clinical tools for Indian hospitals."
+    "A clinician-reviewed workspace for encounter documentation, prescriptions, patient context and facility workflows."
 };
 
 export default function ClinicalProductPage() {
   return (
     <ProductPage
-      eyebrow="Clinical Platform"
-      title="Clinical tools that respect a doctor's time"
-      subtitle="AI-powered documentation, safe digital prescriptions, and patient management — everything a clinician needs, nothing they don't."
+      eyebrow="Clinical workspace"
+      title="Structure care at the point where it happens"
+      subtitle="A clinician-reviewed workspace for encounter documentation, prescriptions, patient context and the workflows around them."
       heroVisual={<MockDashboard />}
       sections={[
         {
-          title: "AI documentation",
+          title: "Clinician-reviewed documentation",
           description:
-            "Write encounter notes the way you think. AI suggestions appear inline as you type — accept them with a click, ignore them freely. Every suggestion is review-gated and audit-logged.",
+            "Structure encounter notes without separating documentation from the care journey. Assistance remains reviewable and the clinician remains responsible for the signed record.",
           bullets: [
-            "Real-time AI-assisted SOAP note drafting",
-            "ICD-10 / SNOMED coding suggestions inline",
-            "Doctor accepts or rejects — AI never signs",
-            "Full audit trail of every AI suggestion"
+            "Structured encounter-note workflow",
+            "Clinician review before a record is signed",
+            "Longitudinal context stays available during the visit",
+            "Record provenance remains visible"
           ],
           visual: <MockDashboard />
         },
         {
           title: "Digital prescriptions",
           description:
-            "Prescriptions checked against interactions and allergies before they're signed, delivered to the patient's WhatsApp the moment they are.",
+            "Create a prescription in the same care context, keep the review step explicit, and make the signed result available to the patient workflow.",
           bullets: [
-            "Drug interaction checks before signing",
-            "Allergy cross-check against the patient record",
-            "QR-coded prescriptions for pharmacy verification",
-            "Instant WhatsApp delivery to the patient"
+            "Prescription details stay attached to the encounter",
+            "Allergy and patient context remain visible",
+            "Clinician review before signing",
+            "Signed records can continue into patient access"
           ],
           visual: (
             <div className="nvl-mock-dash" aria-hidden="true">
@@ -65,19 +65,19 @@ export default function ClinicalProductPage() {
         {
           title: "Patient management",
           description:
-            "Register a patient and link their ABHA in under two minutes. Allergies, chronic conditions, and medication history follow the patient to every encounter.",
+            "Bring identity, allergies, conditions and medication context into one longitudinal view, with country-specific identity handled by the adapter layer.",
           bullets: [
-            "ABHA creation and linking built into registration",
+            "ABHA-aware registration in the India context",
             "Allergy banner on every clinical screen",
             "Longitudinal health timeline per patient",
-            "Duplicate detection at intake"
+            "Identity and record-linking boundaries stay explicit"
           ],
           visual: (
             <div className="nvl-mock-exchange" aria-hidden="true">
               <div className="nvl-flow">
                 <div className="nvl-flow-node">Register</div>
                 <div className="nvl-flow-arrow">
-                  <span>&lt; 2 min</span>
+                  <span>identity</span>
                 </div>
                 <div className="nvl-flow-node accent">ABHA linked</div>
                 <div className="nvl-flow-arrow">
@@ -91,12 +91,12 @@ export default function ClinicalProductPage() {
         {
           title: "Scheduling",
           description:
-            "A calm day view of who's next. Walk-ins, WhatsApp bookings, and follow-ups land in one queue with reminders handled automatically.",
+            "Bring appointments, walk-ins and follow-ups into a shared operational view that can connect to patient communication.",
           bullets: [
-            "Day and week views with live status",
-            "WhatsApp-booked appointments appear automatically",
-            "Walk-in registration in seconds",
-            "Automatic 24-hour reminders cut no-shows"
+            "Day and week views for facility teams",
+            "Channel-originated appointments in the same queue",
+            "Walk-in and follow-up workflows",
+            "Reminder flows connected to patient access"
           ],
           visual: (
             <div className="nvl-mock-dash" aria-hidden="true">

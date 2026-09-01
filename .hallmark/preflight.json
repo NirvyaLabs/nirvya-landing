@@ -1,0 +1,38 @@
+{
+  "scannedAt": "2026-09-01",
+  "source": "approved prior design at git HEAD",
+  "fontStack": {
+    "value": "Inter with system fallbacks",
+    "source": "src/app/globals.css:20"
+  },
+  "palette": {
+    "value": "near-black, white, restrained Nirvya green, cool neutral grays",
+    "source": "src/components/landing/landing.css:8"
+  },
+  "motion": {
+    "value": "motion-cut; no animation library",
+    "source": "package.json:11"
+  },
+  "spacing": {
+    "value": "generous clamp-based section spacing; no formal token scale",
+    "source": "src/components/landing/landing.css:36"
+  },
+  "framework": {
+    "value": "Next.js 16 App Router with static export",
+    "source": "package.json:13"
+  },
+  "routes": [
+    "/",
+    "/product/clinical",
+    "/product/connect",
+    "/product/exchange"
+  ],
+  "preserve": [
+    "near-black and white foundation",
+    "single restrained green accent",
+    "clean sans typography",
+    "generous whitespace",
+    "subtle rounded product surfaces",
+    "minimal motion"
+  ]
+}

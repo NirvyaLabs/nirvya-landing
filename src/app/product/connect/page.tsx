@@ -6,38 +6,38 @@ import { ProductPage } from "@/components/landing/ProductPage";
 export const metadata: Metadata = {
   title: "Patient Connect — Nirvya Health",
   description:
-    "WhatsApp appointment booking, prescription delivery, health records, and reminders — in Telugu, Hindi, and English. No app download needed."
+    "Patient access for appointments, prescriptions, records and follow-up through familiar digital channels."
 };
 
 export default function ConnectProductPage() {
   return (
     <ProductPage
       eyebrow="Patient Connect"
-      title="Meet patients where they are — on WhatsApp"
-      subtitle="550M+ Indians use WhatsApp daily. No app downloads, no logins to remember — healthcare on the platform patients already trust."
+      title="Make the next care step easy to reach"
+      subtitle="Connect appointments, prescriptions, records and follow-up to the digital channels patients already use."
       heroVisual={<MockWhatsApp />}
       sections={[
         {
           title: "Appointment booking",
           description:
-            "A patient sends one message and books a slot in about 30 seconds. The appointment appears instantly on the doctor's schedule.",
+            "Guide a patient from a familiar channel into the facility’s available appointment workflow, then return a clear confirmation.",
           bullets: [
-            "Guided booking flow — reply with a number, done",
-            "Live slot availability from the facility calendar",
-            "Instant confirmation with doctor, date, and time",
-            "Works on any phone that runs WhatsApp"
+            "Guided, low-friction booking flow",
+            "Availability connected to the facility calendar",
+            "Confirmation with doctor, date and time",
+            "No separate app required for a messaging flow"
           ],
           visual: <MockWhatsApp />
         },
         {
           title: "Prescription delivery",
           description:
-            "The moment a doctor signs, the patient gets a secure link on WhatsApp. OTP-verified, so prescriptions stay private even on shared family phones.",
+            "Return a clinician-signed prescription through a secure patient-access path, including a verification step where the channel requires it.",
           bullets: [
-            "Delivered seconds after the doctor signs",
-            "OTP-verified secure links — no open PDFs",
-            "Pharmacy-scannable QR codes",
-            "Re-send anytime from the clinic dashboard"
+            "Delivery begins from a signed clinical record",
+            "Secure-link and verification pattern",
+            "Access designed for shared-device realities",
+            "Facility-controlled re-delivery workflow"
           ],
           visual: (
             <div className="nvl-wa" aria-hidden="true">
@@ -63,12 +63,12 @@ export default function ConnectProductPage() {
         {
           title: "Health records",
           description:
-            "Patients can open their full health timeline — visits, prescriptions, lab results — through a secure web portal. No installs, OTP-verified.",
+            "Give patients a usable view of the records a facility has made available, without separating access from consent and verification.",
           bullets: [
-            "Complete visit history in one place",
-            "Lab results with plain-language summaries",
-            "Share records with any doctor via ABDM consent",
-            "Works in the phone browser — zero installs"
+            "Visits, prescriptions and results in one timeline",
+            "Secure browser-based access",
+            "Consent-aware sharing in supported systems",
+            "Patient access remains connected to the source record"
           ],
           visual: (
             <div className="nvl-mock-exchange" aria-hidden="true">
@@ -87,14 +87,14 @@ export default function ConnectProductPage() {
           )
         },
         {
-          title: "Multilingual by default",
+          title: "Language and channel adaptation",
           description:
-            "Telugu, Hindi, and English — auto-detected from the patient's first message. Reminders and results arrive in the language the family actually reads.",
+            "Patient communication should adapt to local language and channel patterns rather than forcing one global interaction model.",
           bullets: [
-            "Telugu, Hindi, English out of the box",
-            "Auto-detected from the patient's messages",
-            "Clinically-reviewed message templates",
-            "More languages as we expand states"
+            "Localized message templates",
+            "Explicit language preference",
+            "Clinically reviewed communication content",
+            "Country and facility configuration"
           ],
           visual: (
             <div className="nvl-wa" aria-hidden="true">

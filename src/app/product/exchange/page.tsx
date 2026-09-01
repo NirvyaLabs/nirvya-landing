@@ -6,38 +6,38 @@ import { ProductPage } from "@/components/landing/ProductPage";
 export const metadata: Metadata = {
   title: "Health Exchange — Nirvya Health",
   description:
-    "ABDM-native health data infrastructure: FHIR R4 bundles, HIP/HIU integration, consent management, and a multi-country adapter architecture."
+    "Standards-based health record generation, consent boundaries and a country-adapter architecture, starting with India’s ABDM."
 };
 
 export default function ExchangeProductPage() {
   return (
     <ProductPage
       eyebrow="Health Exchange"
-      title="ABDM-native health data infrastructure"
-      subtitle="Built on FHIR R4 from day one — not bolted on. Every encounter becomes a standards-compliant record on India's national health exchange."
-      ctaLabel="Talk to engineering"
+      title="Translate care into records a health system can use"
+      subtitle="A standards-led exchange layer for record generation, consent boundaries and country-specific national adapters—starting with India’s ABDM."
+      ctaLabel="Request a technical pilot"
       sections={[
         {
-          title: "FHIR R4, generated correctly",
+          title: "FHIR-oriented record generation",
           description:
-            "Signing an encounter produces a complete OPConsultRecord or PrescriptionRecord document bundle via Krama Core — patient, practitioner, condition, and medication resources included.",
+            "Krama Core provides an open Python foundation for producing structured health-record bundles from clinical context. Current interfaces and support are documented in the repository.",
           bullets: [
-            "OPConsultRecord, PrescriptionRecord, DischargeSummary builders",
-            "SNOMED CT and ABDM coding systems built in",
-            "Validated document bundles, not hand-rolled JSON",
-            "Open source: pip install krama-core"
+            "FHIR-oriented document-bundle foundation",
+            "Patient, practitioner and clinical context kept together",
+            "Inspectable implementation rather than opaque payloads",
+            "Apache 2.0 licensed Krama Core"
           ],
           visual: <MockExchange />
         },
         {
           title: "ABDM integration",
           description:
-            "The three ABDM milestones are product features, not integration projects: identity (M1), record linking (M2), and data exchange (M3).",
+            "The India adapter is designed around ABDM’s identity, care-context linking and consented exchange responsibilities.",
           bullets: [
-            "M1 — ABHA creation and verification at registration",
-            "M2 — care contexts linked on every signed encounter",
-            "M3 — HIP/HIU data exchange via the ABDM Gateway",
-            "Sandbox-first: test against dev.abdm.gov.in before go-live"
+            "Identity and ABHA-aware registration context",
+            "Care-context and record-linking workflows",
+            "Consent-aware exchange architecture",
+            "Sandbox-first implementation discipline"
           ],
           visual: (
             <div className="nvl-mock-exchange" aria-hidden="true">
@@ -54,12 +54,12 @@ export default function ExchangeProductPage() {
         {
           title: "Consent and security",
           description:
-            "Patient consent artefacts gate every record share. Facility-level isolation, tamper-evident audit trails, and encrypted exchange keep health data where it belongs.",
+            "Consent, facility boundaries and auditability are treated as part of the exchange route—not as a disclaimer added after the workflow.",
           bullets: [
-            "ABDM consent artefact lifecycle management",
-            "Tamper-evident, hash-chained audit trail",
-            "Facility-level data isolation in the database",
-            "ECDH + AES-256-GCM exchange encryption (in development)"
+            "Consent state remains visible in the workflow",
+            "Audit events attach to record movement",
+            "Facility boundaries shape data access",
+            "Security controls documented by implementation stage"
           ],
           visual: (
             <div className="nvl-mock-exchange" aria-hidden="true">
@@ -80,12 +80,12 @@ export default function ExchangeProductPage() {
         {
           title: "Multi-country by design",
           description:
-            "The schema and adapter architecture were designed for more than one health system. India's ABDM is the first adapter — Australia's My Health Record and US FHIR R4 follow.",
+            "The shared core separates clinical and patient workflows from the rules of a national exchange. India is the active product focus; Australia and the United States are architecture contexts, not launch commitments.",
           bullets: [
             "Country adapter layer — swap the exchange, keep the product",
-            "🇮🇳 India · ABDM — active",
-            "🇦🇺 Australia · My Health Record — phase 2 (2027)",
-            "🇺🇸 United States · FHIR R4 — phase 3 (2028)"
+            "India · ABDM — active product focus",
+            "Australia · My Health Record — system context",
+            "United States · interoperable networks — system context"
           ],
           visual: (
             <div className="nvl-mock-exchange" aria-hidden="true">

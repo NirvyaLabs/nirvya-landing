@@ -48,7 +48,10 @@ export const PRODUCT_LINKS = [
 /* ---- count-up stat (animates once when scrolled into view) ---- */
 function CountUp({ value, label }: { value: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [display, setDisplay] = useState(value);
+  const [display, setDisplay] = useState(() => {
+    const match = value.match(/^([\d.]+)(.*)$/);
+    return match ? `0${match[2]}` : value;
+  });
 
   useEffect(() => {
     const el = ref.current;
@@ -62,8 +65,6 @@ function CountUp({ value, label }: { value: string; label: string }) {
     const target = parseFloat(match[1]);
     const suffix = match[2];
     const decimals = match[1].includes(".") ? 1 : 0;
-    setDisplay(`0${suffix}`);
-
     const observer = new IntersectionObserver(
       (entries) => {
         if (!entries[0].isIntersecting) {
@@ -202,14 +203,14 @@ export function MarketingFooter() {
               {item.label}
             </Link>
           ))}
-          <a href="/#open-source">Krama Core (OSS)</a>
+          <Link href="/#open-source">Krama Core (OSS)</Link>
         </div>
         <div className="nvl-footer-col">
           <h4>Company</h4>
-          <a href="/#mission">About</a>
-          <a href="/#mission">Mission</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/#contact">Careers</a>
+          <Link href="/#mission">About</Link>
+          <Link href="/#mission">Mission</Link>
+          <Link href="/#faq">FAQ</Link>
+          <Link href="/#contact">Careers</Link>
         </div>
         <div className="nvl-footer-col">
           <h4>Connect</h4>
